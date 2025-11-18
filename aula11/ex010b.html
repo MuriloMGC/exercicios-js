@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Qual seu país?</h1>
+    Digite o seu país de origem: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="verificar" onclick="pais()">
+    <div id="res">
+
+    </div>
+    <script>
+        function pais(){
+            var origem = document.getElementById('txtpais').value
+            var res = document.getElementById ('res')
+            if (origem.toLowerCase() != 'brasil'){
+                res.innerHTML = `Seu pais de origem é ${origem}, então você é <strong>ESTRANGEIRO</strong>`
+            }else{
+                res.innerHTML = `Seu pais de origem é ${origem}, então você é <strong>BRASILEIRO</strong>`
+            }
+        }
+    </script>
+</body>
+</html>
